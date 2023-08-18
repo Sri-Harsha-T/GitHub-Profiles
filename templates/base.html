@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style >
+     
+        .form-group{
+            text-align: left;
+            margin-left: 35%;
+        }
+        .container { 
+            text-align: center;
+        }
+        
+        #rollnumbers{
+            font-family: monospace;
+            font-size: 20px;
+            color: red;
+        }
+        #welcome_message{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            margin-bottom: 20px;            
+        }
+        .topbar{
+            height:20%;
+            width:100%;
+            background-color:lightgrey;
+            display: block;
+            padding: 40px;
+            margin: 5%,0;
+            z-index: 1;
+        }
+        .topbar a {
+			font-size:20px;
+            color: white;
+			display:block;
+		}
+        .main{
+			text-align: center;
+            padding: 40px;
+            
+		}
+        .main li{
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .cusbutton{display:inline;font-weight:400;color:#212529;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+        .cusbutton-link{font-weight:400;color:#007bff;text-decoration:none}
+        
+            
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>GitHub Profiles</title>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <h2 id = "rollnumbers">Built by 200050030-200050138</h2>
+            <h1 id = "welcome_message">Welcome To GitHub Profiles!</h1>
+        {% if user.is_authenticated %}
+            <button class="btn btn-success"><a href="/explore">Explore</a></button>
+            <button class="btn btn-success"></buttton><a href="/profile">My Profile</a></button>
+            <button class="btn btn-success"><a href="{% url 'logout' %}"> Logout</a></button>
+        {% else %}
+            <button class="btn btn-success"><a href="/register">SignUp</a></button>
+            <button class="btn btn-success"><a href="/login">LogIn</a></button>
+        {% endif %}
+        </div>
+	</div>
+
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+</body>
+</html>

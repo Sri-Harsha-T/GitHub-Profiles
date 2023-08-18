@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}login{% endblock %}
+{% block content %}
+<div class = "form-group">
+<h2>{{ curruser.first_name }} {{ curruser.last_name }}(@{{curruser.username}})</h2>
+<p>{{ curruser.profile.followers}} followers</p>
+ <p><i>Profile last updated : {{curruser.profile.timeupdated}}</i>  {% if curruser.username == user.username %}<!--<form style="display:inline;" action="#" method="get" >
+    <input type="submit" class="cusbutton cusbutton-link" value="Update Now " name="update">
+   </form> -->
+   <a href="{% url 'refresh' %}">Update Now</a>{% endif %}</p>
+<ul>
+    {% for td in curruser.repos.all %}
+    <li>{{td.repo}} - {{td.stars}} stars </li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title%}Explore{% endblock %}
+{% block content %}
+<ul>
+    {% for td in users %}
+        <li><button class="btn btn-outline-info"><a href="/profiles/{{ td.username }}">{{td.username}}</a></button></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/how-to-deploy-django-application-on-heroku/
+https://www.youtube.com/watch?v=t-n7PpIVE5w
+https://www.youtube.com/watch?v=6DI_7Zja8Zc
+https://www.geeksforgeeks.org/how-to-create-and-use-signals-in-django/
+https://stackoverflow.com/questions/32360202/create-a-custom-html-template-using-forms-in-django
+https://www.geeksforgeeks.org/how-to-create-and-use-signals-in-django/
+https://stackoverflow.com/questions/65301053/login-redirect-url-in-django
+https://stackoverflow.com/questions/19342111/get-http-error-code-from-requests-exceptions-httperror
+https://www.geeksforgeeks.org/how-to-create-superuser-in-django/
+https://stackoverflow.com/questions/5315100/how-to-configure-where-to-redirect-after-a-log-out-in-django
+https://stackoverflow.com/questions/44109/extending-the-user-model-with-custom-fields-in-django
+https://stackoverflow.com/questions/16906515/how-can-i-get-the-username-of-the-logged-in-user-in-django
